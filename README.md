@@ -5,3 +5,8 @@ My main website. Code quality is questionable at most. Entering at your own risk
 # TODO
 
 - [ ] Scale to fit viewport
+
+# Credits
+
+- [Font Awesome by Dave Gandy](http://fontawesome.io)
+- [Quicksand by Andrew Paglinawan](https://github.com/andrew-paglinawan/QuicksandFamily)
