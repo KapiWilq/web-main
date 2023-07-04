@@ -13,7 +13,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5625rem; /* 9px */
-		align-items: center;
+		width: fit-content;
 	}
 
 	.TextContainer {
@@ -22,14 +22,15 @@
 		font-family: 'Quicksand Medium';
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 	}
 
 	.First {
-		color: var(--secondary-accent)
+		color: var(--secondary-accent);
 	}
 
 	.Second {
-		color: var(--primary-accent)
+		color: var(--primary-accent);
 	}
 
 	.Logo {
