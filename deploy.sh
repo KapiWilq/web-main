@@ -2,6 +2,7 @@
 
 # and run :tf:
 
+git pull
 npm install
 npm run build
 npm ci --omit dev
