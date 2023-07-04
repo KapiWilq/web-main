@@ -24,10 +24,18 @@
 </div>
 
 <style>
-	.Main {
-		width: 100vw;
-		height: 100vh;
+	:global(html, body) {
+		width: 100%;
+		height: 100%;
 		background-color: var(--main-bg);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.Main {
+		width: fit-content;
+		height: fit-content;
 		display: flex;
 		flex-direction: column;
 		gap: 2.25rem; /* 36px */
