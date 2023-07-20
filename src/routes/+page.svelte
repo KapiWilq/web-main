@@ -6,13 +6,15 @@
 
 	$: innerWidth = 0
 	$: innerHeight = 0
+	$: clientWidth = 0
+	$: clientHeight = 0
+
+	$: divScale = Math.min(innerWidth / clientWidth, innerHeight / clientHeight)
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
-{innerWidth} x {innerHeight}
-
-<div class="Main">
+<div class="Main" bind:clientWidth bind:clientHeight style:scale={divScale}>
 	<Slogan />
 
 	<div class="SocialSection">
