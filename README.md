@@ -4,7 +4,8 @@ My main website. Code quality is questionable at most. Entering at your own risk
 
 # TODO
 
-- [ ] Scale to fit viewport
+- [x] Scale to fit viewport
+- [ ] Optimize it (based on [PageSpeed Insights raport](https://pagespeed.web.dev/analysis/https-kapiwilq-dev/p0jbbmuz8h?form_factor=mobile))
 
 # Credits
 
