@@ -4,15 +4,15 @@
 	import BigButton from "./BigButton.svelte"
     import Slogan from "./Slogan.svelte";
 
-	$: innerWidth = 0
-	$: innerHeight = 0
+	$: availableWidth = 0
+	$: availableHeight = 0
 	$: clientWidth = 0
 	$: clientHeight = 0
 
-	$: divScale = Math.min(innerWidth / clientWidth, innerHeight / clientHeight)
+	$: divScale = Math.min(availableWidth / clientWidth, availableHeight / clientHeight)
 </script>
 
-<svelte:window bind:innerWidth bind:innerHeight />
+<svelte:window bind:innerWidth={availableWidth} bind:innerHeight={availableHeight} />
 
 <div class="Main" bind:clientWidth bind:clientHeight style:scale={divScale}>
 	<Slogan />
