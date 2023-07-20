@@ -3,7 +3,14 @@
     import SocialMedia from "./SocialMedia.svelte";
 	import BigButton from "./BigButton.svelte"
     import Slogan from "./Slogan.svelte";
+
+	$: innerWidth = 0
+	$: innerHeight = 0
 </script>
+
+<svelte:window bind:innerWidth bind:innerHeight />
+
+{innerWidth} x {innerHeight}
 
 <div class="Main">
 	<Slogan />
