@@ -3,9 +3,18 @@
     import SocialMedia from "./SocialMedia.svelte";
 	import BigButton from "./BigButton.svelte"
     import Slogan from "./Slogan.svelte";
+
+	$: availableWidth = 0
+	$: availableHeight = 0
+	$: clientWidth = 0
+	$: clientHeight = 0
+
+	$: divScale = Math.min(availableWidth / clientWidth, availableHeight / clientHeight)
 </script>
 
-<div class="Main">
+<svelte:window bind:innerWidth={availableWidth} bind:innerHeight={availableHeight} />
+
+<div class="Main" bind:clientWidth bind:clientHeight style:scale={divScale}>
 	<Slogan />
 
 	<div class="SocialSection">
@@ -24,6 +33,10 @@
 </div>
 
 <style>
+	:global(:root) {
+		--ver-padding: calc(((1080 - 624.683) / 32) * 1rem);
+	}
+
 	:global(html, body) {
 		width: 100%;
 		height: 100%;
@@ -41,6 +54,7 @@
 		gap: 2.25rem; /* 36px */
 		justify-content: center;
 		align-items: center;
+		padding: var(--ver-padding) 33rem;
 	}
 
 	/* SOCIALS */
